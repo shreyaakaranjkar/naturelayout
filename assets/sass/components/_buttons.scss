@@ -1,0 +1,48 @@
+.btn{
+   
+    &,//parent selector .btn
+    &:link,
+    &:visited{
+        padding: 1rem 2rem;
+        cursor: pointer;
+        border:0;
+        text-decoration: none;
+        border-radius: 100px;
+        font-size: 1rem;
+        text-transform: uppercase;
+        display: inline-block;
+        transition: .5s ease-in-out;
+        position: relative;
+    }
+    &-white{
+        background-color: $color-white;
+        color: $color-grey-dark1;
+
+        &::before{
+            content: '';
+            background-color: rgb(187, 187, 185);
+            width: 100%;
+            height: 100%; 
+            display: inline-block;
+            position: absolute;
+            z-index: -1;
+            top: 0;
+            left: 0;
+            border-radius: 100px;
+            transition: all .4s ease-in-out;
+       }
+    }
+    &:hover,
+    &:focus{
+        transform: translateY(-.1rem);
+        box-shadow: 1rem 2rem 2rem rgba($color-dark, 0.3);
+        &::before{
+            transform: scale(1.2);
+            opacity: 0;
+        }
+    }
+    &:active{
+        transform: translateY(-.5rem);
+        box-shadow: .5rem 1rem 1rem rgba($color-dark, 0.3);
+    }
+}

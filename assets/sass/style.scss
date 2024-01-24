@@ -1,0 +1,44 @@
+
+@import "./abstract/var";
+@import "./abstract/mixins";
+@import "./abstract/functions";
+
+
+@import "./base/base";
+@import "./base/animations";
+@import "./base/typography";
+@import "./base/utility";
+
+@import "./layouts/grid";
+@import "./layouts/footer";
+@import "./layouts/header";
+@import "./layouts/navigation";
+
+@import "./components/buttons";
+@import "./components/cards";
+
+@import "./pages/about";
+@import "./pages/blogs";
+@import "./pages/contact";
+@import "./pages/features";
+@import "./pages/home";
+@import "./pages/services";
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: $color-primary;
+}
+body{
+    font-weight: 400;
+    line-height: 1.7;
+    padding: 3rem;
+    
+}
+h1,p{
+    font-family: 'Lato', sans-serif;
+    font-family: 'Roboto', sans-serif;
+}
